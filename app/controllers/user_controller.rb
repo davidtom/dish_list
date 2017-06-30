@@ -25,7 +25,10 @@ class UserController < ApplicationController
   end
 
   patch "/users/:id" do
-    binding.pry
+    @user = User.find(params[:id])
+    params[:user] = {} if params[:user].nil?
+    @user.update_visited(params[:user][:restaurants])
+    redirect "/users/#{@user.id}"
   end
 
 end

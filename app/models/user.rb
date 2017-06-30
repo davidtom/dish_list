@@ -5,4 +5,16 @@ class User < ActiveRecord::Base
   def visited?(restaurant)
     self.restaurant_users.find_by(restaurant_id: restaurant.id).visited ? "checked" : ""
   end
+
+  def update_visited(checked_restaurants)
+    checked_restaurants = {} if checked_restaurants.nil?
+    self.restaurant_users.each do |row|
+      if checked_restaurants.keys.include?(row.restaurant_id.to_s)
+        row.update(visited: true)
+      else
+        row.update(visited: false)
+      end
+    end
+  end
+
 end
