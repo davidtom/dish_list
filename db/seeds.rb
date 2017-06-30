@@ -1,0 +1,17 @@
+Restaurant.create({name: "Los Pollos Hermanos", website: "www.google.com", address: "123 4th St"})
+Restaurant.create({name: "Eataly", website: "www.eataly.com", address: "22 Broadway"})
+Restaurant.create({name: "Starbucks", website: "www.starbucks.com", address: "down the street"})
+Restaurant.create({name: "Sushi Spot", website: "www.ilovesushi.com", address: "1111 Sushi St"})
+Restaurant.create({name: "The Krusty Krab", website: "www.krustykrab.com", address: "1111 Main St, Bikini Bottom"})
+
+Type.create({name: "Japanese"})
+Type.create({name: "Italian"})
+Type.create({name: "Seafood"})
+Type.create({name: "American"})
+Type.create({name: "Mexican"})
+
+User.create({name: "Gus", password: "meth", home_location: "Chile", work_location: "Albuquerque", other_location: "Mexico"})
+User.create({name: "David", password: "123", home_location: "Upper East Side", work_location: "11 Broadway", other_location: "Slack"})
+User.create({name: "Sarah", password: "456", home_location: "Atlanta", work_location: "11 Broadway", other_location: "Herald Square"})
+User.create({name: "Yelstin", password: "yomi", home_location: "Rockaway", work_location: "11 Broadway", other_location: ""})
+User.create({name: "Jess", password: "crossfit", home_location: "home", work_location: "11 Broadway", other_location: "Astoria"})
