@@ -24,4 +24,8 @@ class UserController < ApplicationController
     erb :'/users/show'
   end
 
+  patch "/users/:id" do
+    binding.pry
+  end
+
 end

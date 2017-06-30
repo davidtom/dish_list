@@ -6,8 +6,12 @@
   </head>
   <body>
     <center><h1> <%= @user.name%>'s Dishlist </h1></center>
-    <% @user.restaurants.each do |restaurant|%>
-      <input type="checkbox" name="" value=""> <%=restaurant.name%>
-    <%end%>
+    <form action="/users/<%= @user.id %>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <% @user.restaurants.each do |restaurant|%>
+        <input type="checkbox" name= <%="user[restaurants][]#{restaurant.id}"%> <%=@user.visited?(restaurant)%>> <%=restaurant.name%> <br>
+      <%end%>
+      <input type="submit" value="Update Dishlist">
+    </form>
   </body>
 </html>
