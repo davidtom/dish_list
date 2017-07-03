@@ -7,6 +7,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem "thin"
 gem "require_all"
+gem "annotate"
 
 group :development do
   gem "shotgun"

@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id             :integer          not null, primary key
+#  name           :string
+#  password       :string
+#  home_location  :string
+#  work_location  :string
+#  other_location :string
+#
+
 class User < ActiveRecord::Base
   has_many :restaurant_users
   has_many :restaurants, through: :restaurant_users
